@@ -2,7 +2,7 @@ import React from "react";
 
 const DetailCard = () => {
   return (
-    <div className="flex flex-col p-2 border-2 rounded-lg shadow-md m-4">
+    <div className="flex flex-col py-2 px-4 border-2 rounded-lg shadow-sm m-4 md:px-8 ">
       <div className="flex flex-col">
         <div className="font-bold">Description</div>
         <p className="font-normal">
@@ -14,7 +14,7 @@ const DetailCard = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4  md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 my-6 md:grid-cols-2">
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">Contact Person</div>
           <p>Imran Dola</p>

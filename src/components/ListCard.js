@@ -11,8 +11,8 @@ const ListCard = () => {
   };
 
   return (
-    <div className="flex flex-col w-full max-w-7xl border rounded-lg bg-white shadow-md ease-in-out duration-300 p-2">
-      <div className="flex flex-col items-center justify-center my-5 w-full md:flex-row md:justify-around md:pl-4 md:h-36 ">
+    <div className="flex flex-col w-full max-w-7xl border rounded-lg bg-white shadow-md  duration-300 p-2 my-2">
+      <div className="flex flex-col items-center justify-center my-5 w-full md:flex-row md:justify-around md:pl-4 md:h-28 ">
         <div className="my-2 text-xl md:text-lg">Hellomet</div>
         <div className="flex flex-col w-full md:flex-row md:justify-around ">
           <div className="flex justify-evenly my-2 md:flex-col">
