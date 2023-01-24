@@ -28,10 +28,10 @@ const Home = () => {
   };
 
   const nonActivePageStyle = "py-1 px-2 border-2 cursor-pointer";
-  const activePageStyle = "py-1 px-2 border-2 cursor-pointer bg-red-400";
+  const activePageStyle = "py-1 px-2 border-2 cursor-pointer bg-red-400 text-white";
  
   return (
-    <div className="flex flex-col items-center h-screen p-4 bg-blue-50">
+    <div className="flex flex-col items-center min-h-screen p-4 bg-blue-50">
       {data.length > 0 &&
         data.slice(page * 3 - 3, page * 3).map((user) => {
           return <ListCard key={user.id} user={user} />;

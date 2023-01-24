@@ -1,7 +1,7 @@
 import React from "react";
 
 const DetailCard = (props) => {
-  const { address, name, email, phone } = props;
+  const { address, name, email, phone, website } = props;
   return (
     <div className="flex flex-col py-2 px-4 border-2 rounded-lg shadow-sm m-4 md:px-8 ">
       <div className="flex flex-col">
@@ -31,8 +31,8 @@ const DetailCard = (props) => {
           <p>Proprietor</p>
         </div>
         <div className="flex justify-between md:flex-col">
-          <div className="font-bold">State</div>
-          <p>Gujarat</p>
+          <div className="font-bold">Website</div>
+          <p>{website}</p>
         </div>
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">Emails</div>
