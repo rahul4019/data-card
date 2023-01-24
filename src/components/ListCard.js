@@ -3,7 +3,11 @@ import { useState } from "react";
 
 import DetailCard from "./DetailCard";
 
-const ListCard = () => {
+const ListCard = (userDetails) => {
+  const { id, name, username, email, address, phone, website, company } =
+    userDetails.user;
+  console.log(id, name, username, email, address, phone, website, company);
+  // console.log(props.user.id);
   const [expandCard, setExpandCard] = useState(false);
 
   const handleBtn = () => {
@@ -13,15 +17,15 @@ const ListCard = () => {
   return (
     <div className="flex flex-col w-full max-w-7xl border rounded-lg bg-white shadow-md  duration-300 p-2 my-2">
       <div className="flex flex-col items-center justify-center my-5 w-full md:flex-row md:justify-around md:pl-4 md:h-28 ">
-        <div className="my-2 text-xl md:text-lg">Hellomet</div>
+        <div className="my-2 text-xl md:text-lg">{company.name}</div>
         <div className="flex flex-col w-full md:flex-row md:justify-around ">
           <div className="flex justify-evenly my-2 md:flex-col">
             <div className="font-bold text-xl md:text-lg">CONTACT</div>
-            <p className="text-xl md:text-lg">Swapnil Warng</p>
+            <p className="text-xl md:text-lg">{name}</p>
           </div>
           <div className="flex justify-evenly my-2 md:flex-col">
             <div className="font-bold text-xl md:text-lg">CITY</div>
-            <p className="text-xl md:text-lg">Mumbai</p>
+            <p className="text-xl md:text-lg">{address.city}</p>
           </div>
           <div className="flex justify-evenly my-2 md:flex-col ">
             <div className="font-bold text-xl md:text-lg">STATE</div>
@@ -37,7 +41,16 @@ const ListCard = () => {
           </button>
         </div>
       </div>
-      <div>{expandCard && <DetailCard />}</div>
+      <div>
+        {expandCard && (
+          <DetailCard
+            address={address}
+            name={name}
+            email={email}
+            phone={phone}
+          />
+        )}
+      </div>
     </div>
   );
 };

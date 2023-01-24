@@ -1,6 +1,7 @@
 import React from "react";
 
-const DetailCard = () => {
+const DetailCard = (props) => {
+  const { address, name, email, phone } = props;
   return (
     <div className="flex flex-col py-2 px-4 border-2 rounded-lg shadow-sm m-4 md:px-8 ">
       <div className="flex flex-col">
@@ -17,12 +18,12 @@ const DetailCard = () => {
       <div className="grid grid-cols-1 gap-4 my-6 md:grid-cols-2">
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">Contact Person</div>
-          <p>Imran Dola</p>
+          <p>{name}</p>
         </div>
-        <div className="flex justify-between md:flex-col ">
+        <div className="flex justify-between md:flex-col">
           <div className="font-bold">Address</div>
           <p className="text-right md:text-left">
-            15 Kashmani Shopping Centre Unn Surat Gujarat 395003
+            {address.suite} {address.street} {address.city} {address.zipcode}
           </p>
         </div>
         <div className="flex justify-between md:flex-col">
@@ -35,15 +36,15 @@ const DetailCard = () => {
         </div>
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">Emails</div>
-          <p>helloservices1@gmail.com</p>
+          <p>{email}</p>
         </div>
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">City</div>
-          <p>Surat</p>
+          <p>{address.city}</p>
         </div>
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">Phones</div>
-          <p>9712500500</p>
+          <p>{phone}</p>
         </div>
         <div className="flex justify-between md:flex-col">
           <div className="font-bold">Country</div>
