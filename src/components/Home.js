@@ -11,7 +11,6 @@ const Home = () => {
 
       response = await response.json();
       setData(response);
-      console.log(data);
     };
 
     fetchData();
@@ -28,8 +27,9 @@ const Home = () => {
   };
 
   const nonActivePageStyle = "py-1 px-2 border-2 cursor-pointer";
-  const activePageStyle = "py-1 px-2 border-2 cursor-pointer bg-red-400 text-white";
- 
+  const activePageStyle =
+    "py-1 px-2 border-2 cursor-pointer bg-red-400 text-white";
+
   return (
     <div className="flex flex-col items-center min-h-screen p-4 bg-blue-50">
       {data.length > 0 &&
@@ -45,7 +45,7 @@ const Home = () => {
           >
             ◀️
           </span>
-          {[...Array(Math.round(data.length / 3)+1)].map((_, i) => {
+          {[...Array(Math.round(data.length / 3) + 1)].map((_, i) => {
             return (
               <span
                 key={i}
@@ -59,7 +59,7 @@ const Home = () => {
             );
           })}
           <span
-            className={page < (data.length / 3)  ? "p-2 cursor-pointer" : "hidden"}
+            className={page < data.length / 3 ? "p-2 cursor-pointer" : "hidden"}
             onClick={() => selectPageHandler(page + 1)}
           >
             ▶️
