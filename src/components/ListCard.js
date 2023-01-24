@@ -14,29 +14,29 @@ const ListCard = (userDetails) => {
 
   return (
     <div className="flex flex-col w-full max-w-7xl border rounded-lg bg-white shadow-md  duration-300 p-2 my-2">
-      <div className="flex flex-col items-center justify-center my-5 w-full md:flex-row md:justify-evenly md:pl-4 md:h-28">
-        <div className="flex my-2 text-xl md:text-lg w-1/3 ">
+      <div className="flex flex-col items-center justify-center my-5 w-full md:flex-row md:justify-between md:pl-4 md:h-28">
+        <div className="flex my-2 text-xl md:text-lg md:w-1/3">
           {company.name}
         </div>
 
-        <div className="flex flex-col w-full md:flex-row md:justify-around">
-          <div className="flex justify-evenly my-2 md:flex-col">
+        <div className="flex flex-col w-full md:flex-row ">
+          <div className="flex justify-evenly my-2 md:flex-col md:w-1/3 md:basis-full">
             <div className="font-bold text-xl md:text-lg">CONTACT</div>
             <p className="text-xl md:text-lg">{name}</p>
           </div>
-          <div className="flex justify-evenly my-2 md:flex-col">
+          <div className="flex justify-evenly my-2 md:flex-col md:basis-full">
             <div className="font-bold text-xl md:text-lg">CITY</div>
             <p className="text-xl md:text-lg">{address.city}</p>
           </div>
-          <div className="flex justify-evenly my-2 md:flex-col ">
+          <div className="flex justify-evenly my-2 md:flex-col md:basis-full">
             <div className="font-bold text-xl md:text-lg">STATE</div>
             <p className="text-xl md:text-lg">Maharastra</p>
           </div>
         </div>
 
-        <div className="flex w-full justify-center my-2 md:w-1/3 md:justify-end">
+        <div className="flex w-full justify-center my-2 md:w-1/3">
           <button
-            className="w-1/2 bg-red-500 text-white p-2 rounded-full hover:bg-red-600 md:w-auto"
+            className="w-1/2 bg-red-500 text-white p-2 rounded-full hover:bg-red-600 md:w-full lg:w-3/4"
             onClick={() => handleBtn()}
           >
             {expandCard ? "Hide Details" : "View Details"}
